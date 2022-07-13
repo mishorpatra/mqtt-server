@@ -4,7 +4,7 @@ import mqtt from 'mqtt'
 export const sendLocation = async (req, res) => {
     try {
         const { id } = req.params
-        //console.log(id) 0579 or 177b
+        //console.log(id) //0579 or 177b
         const client  = mqtt.connect(`mqtt://${process.env.BROKER_ADDRESS.toString()}:${process.env.BROKER_PORT}`)
         client.on('connect', function () {
             client.subscribe(`dwm/node/${id}/uplink/location`, function (err) {

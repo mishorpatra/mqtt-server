@@ -15,9 +15,11 @@ export const saveDevice = async (req, res) => {
     }
 }
 
-export const getDevices = async (req, res) => {
+export const getDevice = async (req, res) => {
     try {
-        const devices = await Device.find({})
+        const { id } = req.params
+        //console.log(id)
+        const devices = await Device.findOne({ customer_id: id })
        // console.log(devices)
         return await res.status(200).json(devices)
     } catch (error) {

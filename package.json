@@ -19,6 +19,8 @@
     "generate-password": "^1.7.0",
     "mongoose": "^6.4.1",
     "mqtt": "^4.3.7",
+    "neo4j": "^2.0.0-RC2",
+    "neo4j-driver": "^4.4.6",
     "nodemailer": "^6.7.5",
     "nodemon": "^2.0.18",
     "react-encrypt": "^1.0.1"
